@@ -9,6 +9,7 @@ import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -28,6 +29,16 @@ public class StockDetailActivity extends AppCompatActivity implements
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == android.R.id.home) {
+            this.finish();
+            return true;
+        }
+        return true;
     }
 
     public static final String TAG_STOCK_SYMBOL = "STOCK_SYMBOL";
@@ -123,7 +134,7 @@ public class StockDetailActivity extends AppCompatActivity implements
         if (lineSet.size() > 1)
             lineChartView.show(anim);
         else
-            Toast.makeText(this, "No data", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.nodata), Toast.LENGTH_SHORT).show();
     }
 
     @Override
