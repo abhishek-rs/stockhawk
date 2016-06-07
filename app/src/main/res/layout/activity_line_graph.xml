@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
-    tools:context="com.sam_chordas.android.stockhawk.ui.DetailActivity">
+    tools:context="com.sam_chordas.android.stockhawk.ui.StockDetailActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,14 +13,14 @@
     android:id="@+id/linechart"
     android:padding="10dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent"
+    />
 
 <ImageView
 android:layout_width="match_parent"
 android:layout_height="wrap_content"
 android:id="@+id/graph_image"
-android:padding="10dp"
-    />
+android:padding="10dp" />
 
        </LinearLayout>
     </ScrollView>
